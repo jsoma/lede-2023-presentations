@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Scrolling Text</title>
+    <title>Lede 2023 Project Presentations</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
@@ -11,6 +11,9 @@
         background-size: 1000% 400%;
         animation: gradient 15s ease infinite;
         height: 100vh;
+        font-family: "Helvetica Neue", sans-serif;
+        font-weight: 200;
+        text-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
       }
 
       #list {
@@ -42,10 +45,9 @@
 
       #list li {
         color: white;
-        text-shadow: rgba(0, 0, 0, 0.2) 0 0 20px;
         font-size: 1em;
-        transition: font-size 0.25s, text-shadow 1s, opacity 0.5s;
-        opacity: 0.3; /* Add opacity to non-active items */
+        transition: font-size 0.3s, text-shadow 1s, opacity 0.5s;
+        opacity: 0.2; /* Add opacity to non-active items */
       }
 
       #list li.active {
@@ -65,14 +67,35 @@
     }
 
     /* Apply styles to prevent horizontal overflow */
-    .vert-wrapper h3 {
+    .vert-wrapper div {
       font-size: 1.5em;
       color: white;
       max-width: 90vh; /* Adjust as needed */
-      font-family: "Helvetica Neue", sans-serif;
-      font-weight: 200;
       text-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
       overflow: hidden;
+    }
+
+    #link, #link2 {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      width: 150px;
+      text-align: center;
+    }
+
+    #link2 {
+      top: auto;
+      bottom: 20px;
+    }
+
+    a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    img {
+      max-width: 100%;
     }
     </style>
   </head>
@@ -102,7 +125,15 @@
       })
     </script>
     <div class="vert-wrapper">
-      <h3>Lede 2023: Project Presentations (Day One)</h3>
+      <div>Lede 2023: Project Presentations, Day One</div>
+    </div>
+    <div id="link">
+      <a href="https://bit.ly/lede-2023">bit.ly/lede-2023</a>
+      <img src="qrcode.png"><br>
+    </div>
+    <div id="link2">
+      <a href="https://docs.google.com/document/d/1HodusoNCG1ImsDUDN3l0hl843wSn-KeDi-CNAMa0gJc/edit?usp=sharing">Project links</a>
+      <img src="qrcode-drive.png"><br>
     </div>
     <ul id="list">
       <li>Judite Cypreste</li>
@@ -113,17 +144,17 @@
       <li>Rafaela Sinderski</li>
       <li>Aishwarya Viswanathan</li>
       <li>Nam Tran</li>
-      <li>Shalaka Shinde</li>
       <li>Julie Iles</li>
       <li>David Horowitz</li>
       <li>Rachel Phua</li>
+      <li>Shalaka Shinde</li>
       <li>Ana Elena Azpurua</li>
-      <li>Emily Keller-O'Donnell</li>
       <li>Elizabeth Connor</li>
       <li>Rajit Sengupta</li>
       <li>Namrata Sampath</li>
       <li>Federico Teijeiro</li>
       <li>Hanna Kang</li>
+      <li>Emily Keller-O'Donnell</li>
     </ul>
   </body>
 </html>
