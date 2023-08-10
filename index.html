@@ -5,6 +5,7 @@
     <title>Lede 2023 Project Presentations</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link href="https://fonts.googleapis.com/css2?family=Caprasimo&display=swap" rel="stylesheet">
     <style>
       body {
         background: linear-gradient(45deg, #f17c58, #e94584, #24aadb, #27dbb1, #ffdc18, #ff3706);
@@ -18,8 +19,8 @@
 
       #list {
         font-size: 3em;
-        font-family: "Caprasimo", sans-serif;
       }
+
       @keyframes gradient {
         0% {
           background-position: 0% 50%;
@@ -47,7 +48,8 @@
         color: white;
         font-size: 1em;
         transition: font-size 0.3s, text-shadow 1s, opacity 0.5s;
-        opacity: 0.2; /* Add opacity to non-active items */
+        opacity: 0.2;
+        font-family: "Caprasimo", sans-serif;
       }
 
       #list li.active {
@@ -56,61 +58,63 @@
         opacity: 1;
         white-space: nowrap;
       }
-    /* Add a wrapper for vertical centering */
-    .vert-wrapper {
-      position: fixed;
-      left: 30px;
-      top: 80%;
-      transform: translateY(-50%) rotate(-90deg);
-      transform-origin: left center;
-      white-space: nowrap;
-    }
 
-    /* Apply styles to prevent horizontal overflow */
-    .vert-wrapper div {
-      font-size: 1.5em;
-      color: white;
-      max-width: 90vh; /* Adjust as needed */
-      text-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
-      overflow: hidden;
-    }
+      /* Add a wrapper for vertical centering */
+      .vert-wrapper {
+        position: fixed;
+        left: 30px;
+        top: 80%;
+        transform: translateY(-50%) rotate(-90deg);
+        transform-origin: left center;
+        white-space: nowrap;
+      }
 
-    #link, #link2 {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      width: 150px;
-      text-align: center;
-    }
+      /* Apply styles to prevent horizontal overflow */
+      .vert-wrapper div {
+        font-size: 1.5em;
+        color: white;
+        max-width: 90vh; /* Adjust as needed */
+        text-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
+        overflow: hidden;
+      }
 
-    #link2 {
-      top: auto;
-      bottom: 20px;
-    }
+      #link,
+      #link2 {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 150px;
+        text-align: center;
+      }
 
-    a {
-      color: white;
-      text-decoration: none;
-      font-weight: bold;
-    }
+      #link2 {
+        top: auto;
+        bottom: 20px;
+      }
 
-    img {
-      max-width: 100%;
-    }
+      a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      img {
+        max-width: 100%;
+      }
     </style>
   </head>
   <body>
     <script>
       document.addEventListener("DOMContentLoaded", function () {
-        let currentIndex = 8;
+        let currentIndex = 8
         let list = document.getElementById("list")
 
         function focusNextItem() {
           let items = list.querySelectorAll("li")
 
-          items[currentIndex-1].classList.remove("active")
+          items[currentIndex - 1].classList.remove("active")
           items[currentIndex].classList.add("active")
-          list.appendChild(items[0].cloneNode(true));
+          list.appendChild(items[0].cloneNode(true))
           list.removeChild(items[0])
 
           const activeItemRect = items[currentIndex].getBoundingClientRect()
@@ -129,11 +133,14 @@
     </div>
     <div id="link">
       <a href="https://bit.ly/lede-2023">bit.ly/lede-2023</a>
-      <img src="qrcode.png"><br>
+      <img src="qrcode.png" /><br />
     </div>
     <div id="link2">
-      <a href="https://docs.google.com/document/d/1HodusoNCG1ImsDUDN3l0hl843wSn-KeDi-CNAMa0gJc/edit?usp=sharing">Project links</a>
-      <img src="qrcode-drive.png"><br>
+      <a
+        href="https://docs.google.com/document/d/1HodusoNCG1ImsDUDN3l0hl843wSn-KeDi-CNAMa0gJc/edit?usp=sharing"
+        >Project links ↗</a
+      >
+      <img src="qrcode-drive.png" /><br />
     </div>
     <ul id="list">
       <li>Judite Cypreste</li>
